@@ -1,0 +1,58 @@
+<h2>Stack</h2>
+<br/>
+<p>
+A stack is an ordered list in which insertion and deletion are done at one end, called top. 
+Stack follows Last In First Out paradigm.
+</p>
+<br/>
+<p>
+Stack Operations 
+</p>
+<li>
+push(int data): inserts data onto stack
+</li>
+<li>
+int pop(): removes and returns the last inserted data from the stack
+</li>
+<li>
+int peek(): returns the last inserted element without removing it
+</li>
+<li>
+int size(): returns the count of elements in the stack
+</li>
+<li>
+boolean isEmpty(): checks if stack is empty
+</li>
+<li>
+boolean isFull(): checks if stack is full
+</li>
+<p>
+When an element is popped or peeked from an empty stack, EmptyStackException is thrown.
+</p>
+<p>
+Space Complexity:  O(n) to hold n elements 
+</p>
+<p>
+Time Complexity: O(1) for pop, peek, size, isEmpty, isFull, O(1) for push using linkedlist, O(n) for push using dynamic array
+</p>
+<br/>
+<h4>
+1. ImplementStackUsingArrays
+</h4>
+<p>
+Using Static Arrays vs Dynamic Arrays for implementation:
+When used static arrays, maximum size of stack must be defined in prior and cannot be changed. 
+Item cannot be pushed into a full stack. 
+</p>
+<p>
+When used dynamic arrays, for every push, array size is incremented. 
+Instead, when used repeated doubling technique, every time array reaches its max limit, array size is doubled to the existing size. 
+Amortized time-complexity to push n elements will be O(n)
+</p>
+<h4>
+2. ImplementStackUsingLinkedList
+</h4>
+<p>
+Push operation is implemented by inserting node at the beginning of the list (head)
+Pop operation is implemented by deleting node from the beginning of the list (head)
+</p>
